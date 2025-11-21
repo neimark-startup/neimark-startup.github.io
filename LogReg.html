@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+ </head>
+
+ <body align="center" >
+    <header class="header" >
+               <div>
+                   <img src="favicon_neimark_education_32_32_px.png" width="33" height="33">
+               </div>
+    </header>
+    <div class="block">
+       <main class="main">
+         <h2>Вход в систему</h2>
+
+        {% if form.errors %}
+          <p style="color: red;">Неверное имя пользователя или пароль.</p>
+        {% endif %}
+
+        <form method="post">
+          {% csrf_token %}
+
+          <div>
+             <label>Имя пользователя:</label>
+             <input name="username" required placeholder="E-mail">
+          </div>
+
+          <div>
+             <label>Пароль:</label>
+             <input name="password" required placeholder="Password" type="password">
+          </div>
+
+         <button type="submit">Войти</button>
+        </form>
+       </main>
+    <div>
+ </body>
+</html>
+<style>
+    body {
+        background-image: url("eqp1mhuvi5fa1.png");
+        background-size: cover;
+    }
+    .main {
+        font-family: Biform, Biform;
+        background: #FFFFFF;
+        color: #151c22;
+        padding: 30px;
+        border-bottom: 0px solid #9e0e80;
+        border-top: 0px solid #9e0e80;
+        border-right: 0px solid #9e0e80;
+        border-left: 0px solid #9e0e80;
+        width: 500px;
+        height: 250px;
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        margin: auto;
+
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: 3px solid #FFFFFF;
+    }
+</style>
